@@ -34,6 +34,33 @@ app.delete('/books/:id', function(req, res, next){
   res.send(books);
 });
 
+// ____________________________________________________________
+// Alternatively:
+// var books_controller = {
+//  index: function(req, res, next){
+//    res.send(books);
+//    },
+// build: function(req, res, next){
+//   books.push(req.body.name);
+//   res.send(books);
+//   },
+// update: function(req, res, next){
+//   var newPosition = req.body.position;
+//   books[newPosition] = req.body.newName;
+//   res.send(books);
+//   },
+// destroy: function(req, res, next){
+//   books.slice(req.params.id, 1);
+//   res.send(books);
+//   }
+// };
+//
+// app.get('/books', books_controller.index);
+// app.post('/books', books_controller.build);
+// app.put('/books', books_controller.update);
+// app.delete('/books/:id', books_controller.destroy);
+// ____________________________________________________________
+
 var port = 3000;
 app.listen(port, function() {
   console.log('listening on port ' + port);
