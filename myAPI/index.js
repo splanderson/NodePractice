@@ -8,10 +8,8 @@ var app = express();
 app.use(bodyParser.json());
 app.use(middleware.addHeaders);
 
-app.listen(8666, function(){
-  console.log('Running on port 8666');
-});
 
+//Get Endpoints
 app.get('/name', mainCtrl.getName);
 app.get('/location', mainCtrl.getLocation);
 app.get('/occupations', mainCtrl.getOccupations);
@@ -23,3 +21,22 @@ app.get('/family/:gender', mainCtrl.getFamilyGen);
 app.get('/restaurants', mainCtrl.getRestaurants);
 app.get('/restaurants/:name', mainCtrl.getRestaurantName);
 app.get('/restaurants/:rating', mainCtrl.getRestaurantsRating);
+
+//Put Endpoints
+app.put('/name/:name', mainCtrl.putName);
+app.put('/location/:location', mainCtrl.putLoc);
+
+//Post Endpoints
+app.post('/hobbies', mainCtrl.postHobby);
+app.post('/occupations', mainCtrl.postOcc);
+app.post('/family', mainCtrl.postFamily);
+app.post('/restaurants', mainCtrl.postRes);
+
+//Skillz Endpoints
+app.get('/skills', mainCtrl.getSkills);
+
+
+//Port
+app.listen(8666, function(){
+  console.log('Running on port 8666');
+});
