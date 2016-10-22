@@ -1,7 +1,7 @@
 var user = {
   name: "Charlie Murphey",
   location: "Narnia",
-  occupations: ["Eating", "Thwarting Rick James"],
+  occupations: ["Eating", "Thwarting Rick James", "Pooping", "Getting Rating to work"],
   hobbies: [
     {
       name: "Board Gaming",
@@ -41,7 +41,7 @@ var user = {
     {
       name: "Taco Burrito",
       type: "Mexican",
-      rating: 5
+      rating: 1
     },
     {
       name: "CupBop",

@@ -22,3 +22,4 @@ app.get('/family', mainCtrl.getFamily);
 app.get('/family/:gender', mainCtrl.getFamilyGen);
 app.get('/restaurants', mainCtrl.getRestaurants);
 app.get('/restaurants/:name', mainCtrl.getRestaurantName);
+app.get('/restaurants/:rating', mainCtrl.getRestaurantsRating);
